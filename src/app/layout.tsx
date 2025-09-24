@@ -28,6 +28,11 @@ export const metadata: Metadata = {
     "A/L",
     "O/L",
   ],
+  icons: {
+    icon: "/images/icon.png",
+    shortcut: "/images/icon.png",
+    apple: "/images/icon.png",
+  },
   openGraph: {
     title: "Apilage AI — Sri Lanka's Sinhala-first AI Agent",
     description:
@@ -36,6 +41,14 @@ export const metadata: Metadata = {
     siteName: "Apilage AI",
     locale: "en_LK",
     type: "website",
+    images: [
+      {
+        url: "/images/icon.png",
+        width: 1200,
+        height: 630,
+        alt: "Apilage AI Logo",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
@@ -43,6 +56,7 @@ export const metadata: Metadata = {
     description:
       "Learn, research, and create with Sri Lanka's Sinhala-first AI agent.",
     creator: "@apilageai",
+    images: ["/images/icon.png"],
   },
 };
 
