@@ -84,7 +84,7 @@ export const storageUtils = {
   },
 
   // Local storage with error handling
-  setItem: (key: string, value: any) => {
+  setItem: (key: string, value: unknown) => {
     try {
       if (typeof window !== 'undefined') {
         localStorage.setItem(key, JSON.stringify(value));
@@ -94,7 +94,7 @@ export const storageUtils = {
     }
   },
 
-  getItem: <T = any>(key: string): T | null => {
+  getItem: <T = unknown>(key: string): T | null => {
     try {
       if (typeof window !== 'undefined') {
         const item = localStorage.getItem(key);
@@ -170,7 +170,7 @@ export const formUtils = {
   },
 
   // Debounce function
-  debounce: <T extends (...args: any[]) => any>(
+  debounce: <T extends (...args: unknown[]) => unknown>(
     func: T,
     wait: number
   ): ((...args: Parameters<T>) => void) => {
@@ -182,7 +182,7 @@ export const formUtils = {
   },
 
   // Throttle function
-  throttle: <T extends (...args: any[]) => any>(
+  throttle: <T extends (...args: unknown[]) => unknown>(
     func: T,
     limit: number
   ): ((...args: Parameters<T>) => void) => {

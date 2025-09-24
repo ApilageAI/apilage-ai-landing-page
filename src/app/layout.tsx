@@ -4,7 +4,6 @@ import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { LoadingProvider } from "@/hooks/useLoading";
-import LoadingSpinner from "@/components/LoadingSpinner";
 import { GlobalLoadingManager } from "@/components/GlobalLoadingManager";
 
 const geistSans = Geist({

@@ -111,7 +111,7 @@ export default function HeroSection({ isLoggedIn = false }: HeroSectionProps) {
             className="mb-8"
           >
             <span className="inline-flex items-center px-3 py-1.5 rounded-full bg-gray-100 dark:bg-gray-800 text-xs font-medium text-gray-600 dark:text-gray-400">
-              Sri Lanka's First Advanced AI Model
+              Sri Lanka&#39;s First Advanced AI Model
             </span>
           </motion.div>
           

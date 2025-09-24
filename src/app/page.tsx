@@ -29,18 +29,14 @@ interface LandingPageProps {
   };
 }
 
-export default function LandingPage({ isLoggedIn = false, user }: LandingPageProps) {
+export default function LandingPage({ isLoggedIn = false }: LandingPageProps) {
   // Initialize theme on mount
   useEffect(() => {
     utils.theme.initializeTheme();
   }, []);
 
   // Handle anchor link clicks
-  const handleAnchorClick = (href: string) => {
-    if (href.startsWith('#')) {
-      utils.animation.scrollToElement(href);
-    }
-  };
+  // anchor click handler not needed currently
 
   return (
     <div className="min-h-screen bg-white dark:bg-gray-900">
