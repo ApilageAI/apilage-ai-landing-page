@@ -94,11 +94,196 @@ export default function HeroSection({ isLoggedIn = false }: HeroSectionProps) {
       id="hero" 
       className="min-h-screen flex items-center relative overflow-hidden pt-20"
     >
-      {/* Clean, minimal background */}
-      <div className="absolute inset-0 bg-gradient-to-b from-gray-50 to-white dark:from-gray-900 dark:to-gray-800" />
+      {/* AI-Educational Neural Network Background */}
+      <div className="absolute inset-0 bg-gradient-to-br from-slate-50 via-blue-50/30 to-indigo-50/20 dark:from-slate-900 dark:via-slate-800/50 dark:to-slate-700" />
       
-      {/* Subtle accent */}
-      <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-red-500/5 dark:bg-red-400/5 rounded-full blur-3xl" />
+      {/* Neural Network Visualization */}
+      <div className="absolute inset-0 opacity-[0.15] dark:opacity-[0.25]">
+        <svg className="w-full h-full" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            {/* Gradient for connections */}
+            <linearGradient id="neuralGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stopColor="rgb(59, 130, 246)" stopOpacity="0.3"/>
+              <stop offset="50%" stopColor="rgb(147, 51, 234)" stopOpacity="0.2"/>
+              <stop offset="100%" stopColor="rgb(239, 68, 68)" stopOpacity="0.3"/>
+            </linearGradient>
+            
+            {/* Educational node gradient */}
+            <radialGradient id="nodeGradient" cx="50%" cy="50%" r="50%">
+              <stop offset="0%" stopColor="rgb(59, 130, 246)" stopOpacity="0.4"/>
+              <stop offset="100%" stopColor="rgb(59, 130, 246)" stopOpacity="0.1"/>
+            </radialGradient>
+          </defs>
+          
+          {/* Neural network connections */}
+          <g stroke="url(#neuralGradient)" strokeWidth="1" fill="none">
+            {/* Layer 1 to Layer 2 connections */}
+            <line x1="10%" y1="20%" x2="35%" y2="15%" />
+            <line x1="10%" y1="20%" x2="35%" y2="30%" />
+            <line x1="10%" y1="20%" x2="35%" y2="45%" />
+            
+            <line x1="10%" y1="40%" x2="35%" y2="15%" />
+            <line x1="10%" y1="40%" x2="35%" y2="30%" />
+            <line x1="10%" y1="40%" x2="35%" y2="45%" />
+            
+            <line x1="10%" y1="60%" x2="35%" y2="30%" />
+            <line x1="10%" y1="60%" x2="35%" y2="45%" />
+            <line x1="10%" y1="60%" x2="35%" y2="60%" />
+            
+            <line x1="10%" y1="80%" x2="35%" y2="45%" />
+            <line x1="10%" y1="80%" x2="35%" y2="60%" />
+            <line x1="10%" y1="80%" x2="35%" y2="75%" />
+            
+            {/* Layer 2 to Layer 3 connections */}
+            <line x1="35%" y1="15%" x2="65%" y2="25%" />
+            <line x1="35%" y1="15%" x2="65%" y2="40%" />
+            <line x1="35%" y1="15%" x2="65%" y2="55%" />
+            
+            <line x1="35%" y1="30%" x2="65%" y2="25%" />
+            <line x1="35%" y1="30%" x2="65%" y2="40%" />
+            <line x1="35%" y1="30%" x2="65%" y2="55%" />
+            <line x1="35%" y1="30%" x2="65%" y2="70%" />
+            
+            <line x1="35%" y1="45%" x2="65%" y2="40%" />
+            <line x1="35%" y1="45%" x2="65%" y2="55%" />
+            <line x1="35%" y1="45%" x2="65%" y2="70%" />
+            
+            <line x1="35%" y1="60%" x2="65%" y2="55%" />
+            <line x1="35%" y1="60%" x2="65%" y2="70%" />
+            
+            <line x1="35%" y1="75%" x2="65%" y2="70%" />
+            
+            {/* Layer 3 to Output connections */}
+            <line x1="65%" y1="25%" x2="90%" y2="35%" />
+            <line x1="65%" y1="25%" x2="90%" y2="50%" />
+            <line x1="65%" y1="25%" x2="90%" y2="65%" />
+            
+            <line x1="65%" y1="40%" x2="90%" y2="35%" />
+            <line x1="65%" y1="40%" x2="90%" y2="50%" />
+            <line x1="65%" y1="40%" x2="90%" y2="65%" />
+            
+            <line x1="65%" y1="55%" x2="90%" y2="50%" />
+            <line x1="65%" y1="55%" x2="90%" y2="65%" />
+            
+            <line x1="65%" y1="70%" x2="90%" y2="65%" />
+          </g>
+          
+          {/* Neural network nodes with educational symbols */}
+          <g fill="url(#nodeGradient)" stroke="rgb(59, 130, 246)" strokeWidth="1.5">
+            {/* Input layer - Educational inputs */}
+            <circle cx="10%" cy="20%" r="8" />
+            <circle cx="10%" cy="40%" r="8" />
+            <circle cx="10%" cy="60%" r="8" />
+            <circle cx="10%" cy="80%" r="8" />
+            
+            {/* Hidden layer 1 */}
+            <circle cx="35%" cy="15%" r="6" />
+            <circle cx="35%" cy="30%" r="6" />
+            <circle cx="35%" cy="45%" r="6" />
+            <circle cx="35%" cy="60%" r="6" />
+            <circle cx="35%" cy="75%" r="6" />
+            
+            {/* Hidden layer 2 */}
+            <circle cx="65%" cy="25%" r="6" />
+            <circle cx="65%" cy="40%" r="6" />
+            <circle cx="65%" cy="55%" r="6" />
+            <circle cx="65%" cy="70%" r="6" />
+            
+            {/* Output layer */}
+            <circle cx="90%" cy="35%" r="8" />
+            <circle cx="90%" cy="50%" r="8" />
+            <circle cx="90%" cy="65%" r="8" />
+          </g>
+          
+          {/* Educational symbols inside key nodes */}
+          <g fill="rgb(59, 130, 246)" fontSize="8" textAnchor="middle" dominantBaseline="middle" opacity="0.6">
+            <text x="10%" y="20%">📚</text>
+            <text x="10%" y="40%">🧮</text>
+            <text x="10%" y="60%">🔬</text>
+            <text x="10%" y="80%">📝</text>
+            
+            <text x="90%" y="35%">🎓</text>
+            <text x="90%" y="50%">💡</text>
+            <text x="90%" y="65%">✨</text>
+          </g>
+        </svg>
+      </div>
+      
+      {/* Floating Knowledge Particles */}
+      <div className="absolute inset-0 overflow-hidden">
+        <motion.div
+          animate={{ 
+            y: [0, -20, 0],
+            opacity: [0.3, 0.6, 0.3]
+          }}
+          transition={{ 
+            duration: 8,
+            repeat: Infinity,
+            ease: "easeInOut"
+          }}
+          className="absolute top-1/4 left-1/5 w-2 h-2 bg-blue-400/40 rounded-full blur-sm"
+        />
+        <motion.div
+          animate={{ 
+            y: [0, 15, 0],
+            x: [0, 10, 0],
+            opacity: [0.2, 0.5, 0.2]
+          }}
+          transition={{ 
+            duration: 12,
+            repeat: Infinity,
+            ease: "easeInOut",
+            delay: 2
+          }}
+          className="absolute top-1/3 right-1/4 w-1.5 h-1.5 bg-purple-400/40 rounded-full blur-sm"
+        />
+        <motion.div
+          animate={{ 
+            y: [0, -10, 0],
+            opacity: [0.4, 0.7, 0.4]
+          }}
+          transition={{ 
+            duration: 10,
+            repeat: Infinity,
+            ease: "easeInOut",
+            delay: 4
+          }}
+          className="absolute bottom-1/3 left-1/3 w-1 h-1 bg-red-400/40 rounded-full blur-sm"
+        />
+      </div>
+      
+      {/* Subtle AI Data Flow Animation */}
+      <div className="absolute inset-0 opacity-[0.08] dark:opacity-[0.15]">
+        <motion.div
+          animate={{ 
+            background: [
+              "linear-gradient(90deg, transparent 0%, rgba(59, 130, 246, 0.1) 50%, transparent 100%)",
+              "linear-gradient(90deg, transparent 100%, rgba(59, 130, 246, 0.1) 150%, transparent 200%)"
+            ]
+          }}
+          transition={{ 
+            duration: 6,
+            repeat: Infinity,
+            ease: "linear"
+          }}
+          className="w-full h-px absolute top-1/4"
+        />
+        <motion.div
+          animate={{ 
+            background: [
+              "linear-gradient(90deg, transparent 0%, rgba(147, 51, 234, 0.1) 50%, transparent 100%)",
+              "linear-gradient(90deg, transparent 100%, rgba(147, 51, 234, 0.1) 150%, transparent 200%)"
+            ]
+          }}
+          transition={{ 
+            duration: 8,
+            repeat: Infinity,
+            ease: "linear",
+            delay: 2
+          }}
+          className="w-full h-px absolute top-2/3"
+        />
+      </div>
 
       <div className="container mx-auto px-4 py-32 relative z-10">
         <div className="max-w-4xl mx-auto text-center">
@@ -181,29 +366,26 @@ export default function HeroSection({ isLoggedIn = false }: HeroSectionProps) {
             </form>
           </motion.div>
 
-          {/* Professional Feature Cards */}
+          {/* Clean Feature Pills */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.8, duration: 0.6 }}
             className="mb-12"
           >
-            <div className="grid grid-cols-3 gap-3 max-w-lg mx-auto">
+            <div className="flex flex-wrap items-center justify-center gap-3 max-w-2xl mx-auto">
               {[
                 {
                   icon: BookOpen,
-                  title: "A/L & O/L",
-                  description: "Syllabus coverage"
+                  title: "A/L & O/L Coverage"
                 },
                 {
                   icon: MessageSquare,
-                  title: "Native Sinhala",
-                  description: "Natural chat"
+                  title: "Native Sinhala Chat"
                 },
                 {
                   icon: Zap,
-                  title: "Instant Help",
-                  description: "24/7 support"
+                  title: "24/7 Instant Help"
                 }
               ].map((feature, index) => (
                 <motion.div
@@ -211,15 +393,16 @@ export default function HeroSection({ isLoggedIn = false }: HeroSectionProps) {
                   initial={{ opacity: 0, y: 10 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.9 + index * 0.1 }}
-                  className="bg-white/30 dark:bg-gray-800/30 backdrop-blur-sm border border-gray-200/20 dark:border-gray-700/20 rounded-lg p-3 text-center hover:bg-white/50 dark:hover:bg-gray-800/50 transition-all duration-200 hover:border-gray-300/30 dark:hover:border-gray-600/30"
+                  className="bg-white/70 dark:bg-gray-800/70 backdrop-blur-sm border border-gray-200/60 dark:border-gray-700/60 rounded-full px-5 py-2.5 hover:bg-white/90 dark:hover:bg-gray-800/90 transition-colors duration-200"
                 >
-                  <feature.icon className="w-4 h-4 mx-auto mb-1.5 text-red-500" />
-                  <h3 className="font-medium text-gray-900 dark:text-white text-xs leading-tight">
-                    {feature.title}
-                  </h3>
-                  <p className="text-xs text-gray-500 dark:text-gray-400 leading-tight">
-                    {feature.description}
-                  </p>
+                  <div className="flex items-center gap-2.5">
+                    <div className="w-5 h-5 bg-red-500/10 rounded-full flex items-center justify-center">
+                      <feature.icon className="w-3 h-3 text-red-500" />
+                    </div>
+                    <span className="text-sm font-medium text-gray-700 dark:text-gray-300 whitespace-nowrap">
+                      {feature.title}
+                    </span>
+                  </div>
                 </motion.div>
               ))}
             </div>
